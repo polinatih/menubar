@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+}
+
+nav {
+    margin-left: 0;
+    height: 70px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+li {
+    display: inline-block; 
+    margin: 0;
+}
+
+button {
+    background-color: antiquewhite;
+    border: none;
+    padding: 10px 20px;
+    font-family: "Dosis", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    transition: background-color 0.3s, font-weight 0.3s;
+    cursor: pointer;
+    width: 300px;
+    height: 70px;
+    border-right: 4px solid white;
+}
+
+button::before {
+    content: '';
+    display: inline-block;
+    width: 24px; 
+    height: 24px; 
+    background-image: url('home.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 15px; 
+    margin-bottom: 4px;
+    vertical-align: middle;
+}
+
+button.home::before {
+    background-image: url('home.svg'); 
+}
+
+button.about::before {
+    background-image: url('person.svg'); 
+}
+
+button.skills::before {
+    background-image: url('skills.svg'); 
+}
+
+button.projects::before {
+    background-image: url('portfolio.svg'); 
+}
+
+button.contact::before {
+    background-image: url('phone.svg'); 
+}
+
+button:hover {
+    background-color: rgb(254, 201, 130); 
+    font-weight: 400; 
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: antiquewhite;
+    width: 300px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Dosis", sans-serif;
+    font-size: 25px;
+    font-weight: normal; 
+}
+.dropdown-content a:hover{
+    background-color: rgb(255, 175, 78);
+}
+.dropdown-content a::before{
+    content: ">   ";
+}
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+.dropdown:hover button.skills {
+    text-decoration: underline;
+    background-color: rgb(254, 151, 130); 
+}
+.dropdown:hover button.projects {
+    text-decoration: underline;
+    background-color: rgb(254, 151, 130); 
+}
